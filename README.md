@@ -6,10 +6,10 @@ python3.10
 `$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -`
 
 ### app
-`$ poetry install`
-`$ docker-compose up -d`
-`$ poetry run alembic upgrade head`
-`$ poetry run python -m myapp.fixture`
+1. `$ poetry install`
+2. `$ docker-compose up -d`
+3. `$ poetry run alembic upgrade head`
+4. `$ poetry run python -m myapp.fixture`
 
 ## test
 `$ poetry run pytest tests -vv`
