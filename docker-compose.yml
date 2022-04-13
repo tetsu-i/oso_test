@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: "oso_test_mysql"
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/logs:/var/log/mysql
+      - ./docker/db/conf.d:/etc/mysql/conf.d
+    ports:
+      - "3310:3306"
+    tty: true
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_DATABASE=oso_test
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+      - TZ=Asia/Tokyo
+    command:
+      mysqld --sql-mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES

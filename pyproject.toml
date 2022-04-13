@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "oso_test"
+version = "0.1.0"
+description = ""
+authors = ["tetsu-i <tetsu.ito333@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+oso = "^0.26.0"
+SQLAlchemy = "^1.4.35"
+alembic = "^1.7.7"
+black = "^22.3.0"
+SQLAlchemy-bulk-lazy-loader = "^0.10.0"
+mysqlclient = "^2.1.0"
+pytest = "^7.1.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
